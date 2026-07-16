@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-surface-container-low: #f3f3f3;
+  --color-on-background: #1b1b1b;
+  --color-outline-variant: #cfc6ae;
+  --color-secondary-fixed: #ffd8e6;
+  --color-on-secondary-fixed-variant: #8c0058;
+  --color-inverse-surface: #303030;
+  --color-surface-container: #eeeeee;
+  --color-inverse-primary: #e7c433;
+  --color-on-primary: #ffffff;
+  --color-on-error: #ffffff;
+  --color-secondary-fixed-dim: #ffb0d0;
+  --color-tertiary-fixed: #6bfe9c;
+  --color-surface-container-highest: #e2e2e2;
+  --color-background: #f9f9f9;
+  --color-on-secondary-container: #6c0042;
+  --color-inverse-on-surface: #f1f1f1;
+  --color-primary-fixed: #ffe174;
+  --color-secondary-container: #fd68b3;
+  --color-on-primary-fixed: #221b00;
+  --color-surface-tint: #705d00;
+  --color-on-surface-variant: #4c4634;
+  --color-tertiary-fixed-dim: #4ae183;
+  --color-on-primary-fixed-variant: #554500;
+  --color-surface: #f9f9f9;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed-variant: #005228;
+  --color-error: #ba1a1a;
+  --color-on-error-container: #93000a;
+  --color-on-tertiary-container: #006834;
+  --color-surface-variant: #e2e2e2;
+  --color-on-secondary: #ffffff;
+  --color-on-primary-container: #6c5900;
+  --color-secondary: #ac2471;
+  --color-primary: #705d00;
+  --color-primary-container: #f4d03f;
+  --color-primary-fixed-dim: #e7c433;
+  --color-on-secondary-fixed: #3d0024;
+  --color-on-surface: #1b1b1b;
+  --color-tertiary-container: #58ed8e;
+  --color-surface-container-high: #e8e8e8;
+  --color-error-container: #ffdad6;
+  --color-tertiary: #006d37;
+  --color-on-tertiary-fixed: #00210c;
+  --color-outline: #7e7762;
+  --color-surface-bright: #f9f9f9;
+  --color-surface-dim: #dadada;
+  --color-surface-container-lowest: #ffffff;
+
+  --font-headline-md: var(--font-headline);
+  --font-display-lg-mobile: var(--font-headline);
+  --font-headline-lg: var(--font-headline);
+  --font-display-lg: var(--font-headline);
+  --font-body-md: var(--font-body);
+  --font-body-lg: var(--font-body);
+  --font-label-mono: var(--font-mono);
+
+  --font-size-display-lg: 80px;
+  --font-size-display-lg--line-height: 1;
+  --font-size-display-lg--letter-spacing: -0.04em;
+  --font-size-display-lg--font-weight: 900;
+
+  --font-size-display-lg-mobile: 48px;
+  --font-size-display-lg-mobile--line-height: 1.1;
+  --font-size-display-lg-mobile--letter-spacing: -0.02em;
+  --font-size-display-lg-mobile--font-weight: 900;
+
+  --font-size-headline-lg: 40px;
+  --font-size-headline-lg--line-height: 1.2;
+  --font-size-headline-lg--font-weight: 800;
+
+  --font-size-headline-md: 32px;
+  --font-size-headline-md--line-height: 1.2;
+  --font-size-headline-md--font-weight: 800;
+
+  --font-size-body-lg: 20px;
+  --font-size-body-lg--line-height: 1.6;
+  --font-size-body-lg--font-weight: 500;
+
+  --font-size-body-md: 16px;
+  --font-size-body-md--line-height: 1.6;
+  --font-size-body-md--font-weight: 500;
+
+  --font-size-label-mono: 14px;
+  --font-size-label-mono--line-height: 1;
+  --font-size-label-mono--font-weight: 700;
+
+  --spacing-unit: 4px;
+  --spacing-stack-sm: 12px;
+  --spacing-stack-lg: 48px;
+  --spacing-gutter: 24px;
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 16px;
+  --spacing-stack-md: 24px;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    overflow-x: hidden;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .neobrutal-shadow {
+    box-shadow: 8px 8px 0 0 #000;
+  }
+  .neobrutal-shadow-lg {
+    box-shadow: 12px 12px 0 0 #000;
+  }
+  .neobrutal-shadow-sm {
+    box-shadow: 4px 4px 0 0 #000;
+  }
+  .btn-press:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 #000;
+  }
 }

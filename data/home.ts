@@ -1,0 +1,82 @@
+export const HOME = {
+  badge: "Portfolio Vol. 24",
+  primaryWords: ["FULLSTACK"],
+  secondaryWords: ["DEVELOPER"],
+  description:
+    "I'm an Informatics student and aspiring Fullstack Web Developer specializing in Laravel and Next.js.",
+  cta: "See My Work",
+  heroImage:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuD9eWoG6DbvuG8Hx08WkpXqJA9AHZebJmNlMOKIxFUeJX67l2pGHcF1eNGKVb84iJg3_9uHtI8d2p0XNbMPoTb90ABQYexykWeDohg5RQ7itRWgZ-ntddZ88HrCikahX28xywoGpMDlYulFMiD3xcuYjNrxZOWn1KAeQInFS3nIIIUuwI_atULv8U1WGxQZuT1JRFjTYI0V9Bv1T3611bx86N-jyOvsAsImvicdf8OjECg4H4g2-CteEc2VAoPtixr5FsGHdx0GPV0",
+  skills: [
+    "Laravel",
+    "Taildwind",
+    "NextJs",
+    "ReactJs",
+    "JavaScript",
+  ],
+  certificates: [
+    {
+      icon: "verified",
+      title: "Algoritma Pemrograman Dengan Bahasa C",
+      issuer: "ITBOX",
+      year: "2024",
+      link: "https://itbox.id/certificate-verifier/139503750-75974CA0D5-12CEB2516",
+    },
+    {
+      icon: "verified",
+      title: "Basic Jaringan Komputer",
+      issuer: "ITBOX",
+      year: "2024",
+      link: "https://itbox.id/certificate-verifier/139503750-75974C7C1C-12CEB2516",
+    },
+    {
+      icon: "verified",
+      title: "Object Oriented Programming Dengan Java",
+      issuer: "ITBOX",
+      year: "2024",
+      link: "https://itbox.id/certificate-verifier/139503750-75974C795D-12CEB2516",
+    },
+    {
+      icon: "verified",
+      title: "Database Course Level Basic",
+      issuer: "ITBOX",
+      year: "2024",
+      link: "https://itbox.id/certificate-verifier/139503750-13ECC5154-12CEB2516",
+    },
+    {
+      icon: "verified",
+      title: "Database Course Level Intermediate",
+      issuer: "ITBOX",
+      year: "2024",
+      link: "https://itbox.id/certificate-verifier/139503750-13ECC534A-12CEB2516",
+    },
+    {
+      icon: "verified",
+      title: "Database Course Level Advanced",
+      issuer: "ITBOX",
+      year: "2024",
+      link: "https://itbox.id/certificate-verifier/139503750-13ECC7868-12CEB2516",
+    },
+    {
+      icon: "verified",
+      title: "Cyber Security Course Level Basic",
+      issuer: "ITBOX",
+      year: "2024",
+      link: "https://itbox.id/certificate-verifier/139503750-13EDAD29B-12CEB2516",
+    },
+    {
+      icon: "verified",
+      title: "Cyber Security Course Level Intermediate",
+      issuer: "ITBOX",
+      year: "2024",
+      link: "https://itbox.id/certificate-verifier/139503750-13ECB68EB-12CEB2516",
+    },
+    {
+      icon: "verified",
+      title: "Cyber Security Course Level Advanced",
+      issuer: "ITBOX",
+      year: "2024",
+      link: "https://itbox.id/certificate-verifier/139503750-13ECB8E6A-12CEB2516",
+    },
+  ],
+} as const
