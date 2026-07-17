@@ -56,7 +56,6 @@ export default function ContactForm() {
         className="w-full bg-primary-container text-on-primary-container border-4 border-on-background py-8 font-display-lg-mobile md:font-display-lg text-[32px] md:text-[40px] uppercase neobrutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0_0_#000] active:translate-x-2 active:translate-y-2 active:shadow-none transition-all mt-4 group"
       >
         {pending ? "SENDING..." : "Send Message"}
-        <span className="inline-block transition-transform group-hover:translate-x-2"> &rarr;</span>
       </button>
     </form>
   )

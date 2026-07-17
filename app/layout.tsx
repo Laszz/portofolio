@@ -5,7 +5,7 @@ import SmoothScroll from "@/components/smooth-scroll"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "LASZZ | Neobrutalist Portfolio",
+  title: "Portfolio",
   description:
     "Breaking digital boundaries with high-contrast UI and structural honesty. A neobrutalist portfolio showcasing raw creative output.",
 }

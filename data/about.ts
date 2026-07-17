@@ -3,7 +3,7 @@ export const ABOUT = {
   bio: "I am a Full-Stack Developer with a keen interest in cybersecurity. I enjoy building modern, secure, and user-friendly web applications, prioritizing code quality, performance, and system security. I continuously learn new technologies to develop efficient, scalable solutions that meet user needs. Additionally, I am passionate about software development, application security, and the implementation of best practices in system development.",
   tags: ["FullStack", "CyberSecurity", "VibeCoders"],
   image:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuD7BCObqaz97uCgMrXz83ze4eTY8gfjWPjrOxHn6QZ-_7eG65OEqHFgYvFYBTBZ0d44N_mvdXLSx33P5BaWzzVVXViaggehazwQbJfS8V5MUQ69mjcP2HRS8TQsArN8qusGmAWYb_HYK6qsPBr2v24Y4t-ssuqGiX7cjQ4D5UBC_QgmJde7z1mPKDxvmg-iD0LQZL162gp4GFCL7-W_MoNELQabG0Tt4JwfxkWT30cXnD8ChHXDLUmTWF6MeLprcj1CIjWuT8arnvg",
+    "",
   philosophy: [
     {
       icon: "bolt",
@@ -32,24 +32,24 @@ export const ABOUT = {
   ],
   timeline: [
     {
-      period: "2022 \u2014 PRESENT",
-      title: "Lead Chaos Engineer",
+      period: "2025 \u2014 PRESENT",
+      title: "FULLSTACK WEB DEVELOPER",
       description:
-        'Spearheading creative direction at <span class="font-bold underline decoration-4 decoration-secondary">REBEL STUDIO</span>. Managing a team of 12 designers to disrupt the SaaS landscape.',
+        'Building modern web applications using Laravel, Next.js, React, and TypeScript with a focus on clean architecture, responsive user interfaces, and secure backend development.',
       color: "bg-primary",
     },
     {
-      period: "2019 \u2014 2022",
-      title: "Senior Interface Punk",
+      period: "2022 \u2014 2026",
+      title: "INFORMATICS STUDENT",
       description:
-        "Redesigning the foundations of digital interaction for early-stage startups who dared to be loud.",
+        "Pursuing Informatics studies at Universitas Amikom Purwokerto while strengthening skills in software engineering, databases, web development, and cybersecurity through academic and personal projects.",
       color: "bg-secondary",
     },
     {
-      period: "2016 \u2014 2019",
-      title: "Junior Pixel Wrangler",
+      period: "2024 \u2014 2025",
+      title: "MBKM Program",
       description:
-        "Learning the rules just to break them. Focused on typography, layout hierarchy, and expressive code.",
+        "Completed the *Merdeka Belajar Kampus Merdeka (MBKM) program organized by the Indonesian Ministry of Education through CourseNet Indonesia, focusing on cybersecurity fundamentals, web application security, vulnerability assessment, and secure development practices.",
       color: "bg-tertiary",
     },
   ],

@@ -4,6 +4,7 @@ import { useRef } from "react"
 import Link from "next/link"
 import ContactForm from "@/components/contact-form"
 import Footer from "@/components/footer"
+import { lenis } from "@/components/smooth-scroll"
 import { HOME } from "@/data/home"
 import { WORK } from "@/data/work"
 import { ABOUT } from "@/data/about"
@@ -21,7 +22,9 @@ import "./home.css"
 export default function HomePage() {
   const text = useTypingAnimation(HOME.primaryWords, HOME.secondaryWords)
   const imgRef = useRef<HTMLDivElement>(null!)
+  const aboutImgRef = useRef<HTMLDivElement>(null!)
   useHeroTilt(imgRef)
+  useHeroTilt(aboutImgRef)
   useButtonPress()
   useScrollReveal()
   useMouseShadow()
@@ -59,15 +62,22 @@ export default function HomePage() {
             </div>
             <p className="font-body-lg max-w-2xl text-on-background border-l-[6px] border-on-background pl-6 py-4 mt-4">{HOME.description}</p>
             <div className="flex gap-stack-sm mt-stack-md">
-              <button onClick={() => document.getElementById("project")?.scrollIntoView({ behavior: "smooth" })} className="bg-on-background text-background px-10 py-5 border-4 border-on-background font-headline-md text-xl uppercase neobrutal-shadow transition-all btn-press flex items-center gap-3 hover:bg-tertiary hover:border-tertiary group">
-                See My Work
-                <span className="inline-block group-hover:translate-x-2 transition-transform text-2xl">&rarr;</span>
+              <button onClick={() => lenis?.scrollTo("#project", { offset: -80 })} className="bg-on-background text-background px-10 py-5 border-4 border-on-background font-headline-md text-xl uppercase neobrutal-shadow transition-all btn-press flex items-center gap-3 hover:bg-tertiary hover:border-tertiary group">
+                {HOME.cta}
               </button>
             </div>
           </div>
           <div className="md:col-span-4 mt-12 md:mt-0 relative">
             <div ref={imgRef} className="relative z-10 bg-surface border-4 border-on-background neobrutal-shadow-lg aspect-[3/4] w-full overflow-hidden group">
-              <img alt="Profile" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src={HOME.heroImage} />
+              {HOME.heroImage ? (
+                <img alt="Profile" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src={HOME.heroImage} />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-surface-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-24 h-24 text-on-surface-variant opacity-40">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </div>
+              )}
               <div className="absolute bottom-0 w-full p-4 bg-background border-t-4 border-on-background">
                 <p className="font-label-mono uppercase font-bold text-on-background">Laszz</p>
               </div>
@@ -123,7 +133,9 @@ export default function HomePage() {
                         {p.image ? (
                           <img className="w-full h-full object-cover" alt={p.title} src={p.image} />
                         ) : (
-                          <span className="material-symbols-outlined text-6xl text-on-surface-variant">image</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-20 h-20 text-on-surface-variant opacity-30">
+                            <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
+                          </svg>
                         )}
                       </div>
                     </div>
@@ -171,8 +183,16 @@ export default function HomePage() {
             </div>
           </div>
           <div className="md:col-span-5 relative order-1 md:order-2">
-            <div className="border-4 border-on-background bg-on-background p-2 neo-shadow md:rotate-3">
-              <img className="w-full h-[500px] object-cover grayscale brightness-110" alt="Portrait" src={ABOUT.image} />
+            <div ref={aboutImgRef} style={{ transformStyle: "preserve-3d" }} className="border-4 border-on-background bg-on-background p-2 neo-shadow md:rotate-3 overflow-hidden">
+              {ABOUT.image ? (
+                <img className="w-full h-[500px] object-cover grayscale brightness-110" alt="Portrait" src={ABOUT.image} />
+              ) : (
+                <div className="w-full h-[500px] flex items-center justify-center bg-surface-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-32 h-32 text-on-surface-variant opacity-40">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </div>
+              )}
             </div>
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-secondary-container border-2 border-on-background -z-10 rotate-12" />
             <div className="absolute -bottom-8 -left-8 w-32 h-12 bg-tertiary-container border-2 border-on-background -z-10 -rotate-6" />
