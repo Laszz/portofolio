@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Portfolio",
   description:
     "Breaking digital boundaries with high-contrast UI and structural honesty. A neobrutalist portfolio showcasing raw creative output.",
+  icons: "/favicon.svg",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

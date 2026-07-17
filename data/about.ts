@@ -1,31 +1,31 @@
 export const ABOUT = {
   headline: "Introduce",
   bio: "I am a Full-Stack Developer with a keen interest in cybersecurity. I enjoy building modern, secure, and user-friendly web applications, prioritizing code quality, performance, and system security. I continuously learn new technologies to develop efficient, scalable solutions that meet user needs. Additionally, I am passionate about software development, application security, and the implementation of best practices in system development.",
-  tags: ["FullStack", "CyberSecurity", "VibeCoders"],
+  tags: ["FullStack", "CyberSecurity",],
   image:
     "",
   philosophy: [
     {
-      icon: "bolt",
-      title: "High Tension",
+      icon: "construction",
+      title: "CLEAN ARCHITECTURE",
       description:
-        "My designs live in the friction between brutalist honesty and high-end functional engineering.",
+        "Building maintainable and scalable applications with clear project structures and reusable components.",
       bg: "bg-white",
       offset: false,
     },
     {
-      icon: "construction",
-      title: "Raw Logic",
+      icon: "bolt",
+      title: "PERFORMANCE",
       description:
-        "If the structure is beautiful, why hide it? I celebrate the grid, the border, and the skeleton of the UI.",
+        "Creating responsive, optimized, and efficient web applications that deliver a smooth user experience.",
       bg: "bg-secondary-container",
       offset: true,
     },
     {
-      icon: "history_edu",
-      title: "Dirty Digital",
+      icon: "security",
+      title: "QUALITY & SECURITY",
       description:
-        "Texture over gradients. Hard shadows over blurs. I bring a tactile soul to every digital pixel.",
+        "Developing software with a strong focus on code quality, secure development practices, and long-term reliability.",
       bg: "bg-tertiary-fixed",
       offset: false,
     },
